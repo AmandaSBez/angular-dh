@@ -1,0 +1,87 @@
+1) npm install -g @angular/cli
+2) ng --version
+3) entra na pasta e faz...
+4) ng serve --open
+5) npm install bootstrap
+
+
+no outro dia... 
+TODO O PASSO A PASSO: https://www.notion.so/Angular-2-CRUD-088bd03c9ef54274869c00db7670f367
+
+(https://material.io/)
+Em app.component.ts :
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html'
+})
+export class AppComponent {}
+
+
+Vai em app.component.html apaga tudo
+
+EM FRONTEND:
+5) ng add @angular/material
+ai instala um tema
+6) ng g c components/template/header
+
+vai em app.component.html:
+<app-header></app-header>
+
+em app.module.ts  linha 9:
+import {MatToolbarModule} from '@angular/material/toolbar';
+dentro de imports (linha 16):
+MatToolbarModule
+
+
+vai no header.component.html:
+<mat-toolbar class="header mat-elevation-z4">
+	<span>
+		<a>
+			<img class="logo" src="assets/img/logo.png" alt="logo">
+		</a>
+	</span>
+	<span>
+		<a>
+			<li class="material-icons">
+				Home
+			</li>
+			Angular | crud
+
+		</a>
+	</span>
+</mat-toolbar>
+
+
+vai em header.component.css:
+.header {
+	display: flex;
+	align-items: center;
+}
+
+.header a {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+}
+
+.header .logo {
+    max-height: 60px;
+}
+
+.header .title-group {
+	padding-left: 25px;
+}
+
+.header .title-group i{
+    padding-left: 25px;
+}
+
+
+Depois:
+ng g c components/template/footer
+
+A cada ng g c views/... você cria uma pasta views e um arquivo nela
+

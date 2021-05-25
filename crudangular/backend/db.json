@@ -1,0 +1,18 @@
+{
+    "products" : [{
+        "id": 1,
+        "name":"Camisa do Corínthians",
+        "price": 150
+    },
+    {
+        "id": 2,
+        "name":"Camisa do Cássio",
+        "price": 90
+    },
+    {
+        "id": 3,
+        "name":"Camisa do Neto",
+        "price": 200
+    }
+]
+}
